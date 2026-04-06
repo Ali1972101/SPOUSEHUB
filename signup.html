@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPOUSEHUB - Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="auth-page">
+    <a href="index.html" class="auth-nav-link">&larr;</a>
+    
+    <div class="auth-card">
+        <h2>Join SPOUSEHUB</h2>
+        <p class="auth-subtitle">Create an account and start your journey.</p>
+        <form id="signup-form">
+            
+            <!-- Custom Photo Upload Preview -->
+            <div class="photo-upload-wrapper">
+                <label for="signup-photo" class="photo-preview-circle" id="photo-preview">
+                    <span class="upload-icon">+</span>
+                </label>
+                <input type="file" id="signup-photo" name="photo" accept="image/*" required style="display: none;" />
+                <p>Upload Profile Picture</p>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="signup-name" name="name" required placeholder=" " />
+                <label for="signup-name">Full Name</label>
+            </div>
+            <div class="input-group">
+                <input type="email" id="signup-email" name="email" required placeholder=" " />
+                <label for="signup-email">Email Address</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="signup-password" name="password" required placeholder=" " />
+                <label for="signup-password">Password</label>
+            </div>
+            
+            <button type="submit" class="auth-submit-btn">Sign Up</button>
+        </form>
+        <p class="auth-toggle-text">Already have an account? <a href="login.html" class="auth-toggle-link" style="text-decoration:none;">Log in</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
