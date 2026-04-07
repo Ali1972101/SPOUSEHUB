@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPOUSEHUB - Contact Us</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <a href="index.html" style="text-decoration: none"
+        ><div class="logo">SPOUSEHUB</div></a
+      >
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+        <span class="bar" style="background-color: var(--primary-color)"></span>
+        <span class="bar" style="background-color: var(--primary-color)"></span>
+        <span class="bar" style="background-color: var(--primary-color)"></span>
+      </button>
+    </header>
+
+    <!-- Sidebar Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Sidebar Menu -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">SPOUSEHUB</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <p>&copy; 2026 Elite Design Studio</p>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <section class="contact-section">
+        <div class="contact-card">
+          <h1>Get in <span class="highlight-text">Touch</span></h1>
+          <p class="contact-subtitle">
+            We would love to hear from you. Send us a message and we will
+            respond as soon as possible!
+          </p>
+
+          <form id="contact-form">
+            <div class="input-group">
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                required
+                placeholder=" "
+              />
+              <label for="contact-name">Full Name</label>
+            </div>
+            <div class="input-group">
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                required
+                placeholder=" "
+              />
+              <label for="contact-email">Email Address</label>
+            </div>
+            <div class="input-group">
+              <textarea
+                id="contact-message"
+                name="message"
+                required
+                placeholder=" "
+                rows="5"
+              ></textarea>
+              <label for="contact-message">Your Message</label>
+            </div>
+
+            <button
+              type="submit"
+              class="auth-submit-btn"
+              style="margin-top: 1rem"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <section class="footer1">
+      <div>
+        <img src="/assets/instagram.svg" alt="" />
+      </div>
+      <div>
+        <img src="/assets/facebook.svg" alt="" />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-content">
+        <h2 class="footer-logo">SPOUSEHUB</h2>
+        <p>&copy; 2026 SPOUSEHUB. Sparking connections.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Specific Contact Form Logic
+      document.addEventListener("DOMContentLoaded", () => {
+        const contactForm = document.getElementById("contact-form");
+        if (contactForm) {
+          contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert(
+              "Thank you! Your message has been successfully sent to SPOUSEHUB.",
+            );
+            contactForm.reset();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

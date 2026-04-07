@@ -475,12 +475,57 @@ main {
     font-size: 1.05rem;
 }
 
+/* Contact Section */
+.contact-section {
+    padding: 6rem 5%;
+    display: flex;
+    justify-content: center;
+    background: white;
+}
+
+.contact-card {
+    background: var(--bg-color);
+    border-radius: 30px;
+    padding: 4rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-card h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.contact-subtitle {
+    text-align: center;
+    color: var(--light-text);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
 /* Footer */
 .main-footer {
     background: white;
     padding: 3rem 5%;
     text-align: center;
     border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer1 {
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+  justify-content: center;
+}
+
+.footer1 img {
+  width: 40px;
+  height: auto;
+  border: 1px solid black;
+  background-color: black;
 }
 
 .footer-logo {
@@ -603,7 +648,7 @@ main {
     margin-bottom: 1.5rem;
 }
 
-.input-group input {
+.input-group input, .input-group textarea {
     width: 100%;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.9);
@@ -614,7 +659,11 @@ main {
     transition: all 0.3s ease;
 }
 
-.input-group input:focus {
+.input-group textarea {
+    resize: vertical;
+}
+
+.input-group input:focus, .input-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
     background: #ffffff;
@@ -630,8 +679,15 @@ main {
     pointer-events: none;
 }
 
+/* For textarea, the label shouldn't be centered in the huge block, but centered top */
+.input-group textarea ~ label {
+    top: 1.5rem;
+}
+
 .input-group input:focus ~ label,
-.input-group input:not(:placeholder-shown) ~ label {
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
     top: -10px;
     left: 10px;
     font-size: 0.8rem;
