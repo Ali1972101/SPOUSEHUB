@@ -477,7 +477,7 @@ main {
 
 /* Contact Section */
 .contact-section {
-    padding: 6rem 5%;
+    padding: 6rem 5% 2rem 5%;
     display: flex;
     justify-content: center;
     background: white;
