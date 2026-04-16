@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPOUSEHUB - Discover Matches</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="dashboard-page">
+    <header class="header dashboard-header">
+        <a href="index.html" class="logo" style="text-decoration:none;">SPOUSEHUB</a>
+        <div class="user-profile-icon">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=" alt="Your Profile" class="header-avatar">
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <label>Distance <span class="filter-value">50 miles</span></label>
+                <input type="range" class="custom-range" min="1" max="100" value="50">
+            </div>
+            <div class="filter-group">
+                <label>Age <span class="filter-value">18 - 35</span></label>
+                <input type="range" class="custom-range" min="18" max="70" value="35">
+            </div>
+            <div class="filter-group">
+                <label>Interested In</label>
+                <select class="custom-select">
+                    <option>Women</option>
+                    <option>Men</option>
+                    <option>Everyone</option>
+                </select>
+            </div>
+            <button class="primary-btn apply-btn">Apply Filters</button>
+        </aside>
+
+        <section class="dashboard-content">
+            <div class="dashboard-header-text">
+                <h2 class="dashboard-title">Discover Matches</h2>
+                <p class="dashboard-subtitle">Find people who align with your values.</p>
+            </div>
+            
+            <div class="matches-grid" id="matches-container">
+                <!-- Matches will be dynamically populated here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Message Modal -->
+    <div class="modal-overlay" id="message-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <div class="modal-header">
+                <h3 id="modal-user-name">Message</h3>
+            </div>
+            <textarea id="message-text" placeholder="Say something nice..." rows="4"></textarea>
+            <button class="primary-btn" id="send-message-btn" style="width:100%; margin-top: 1rem;">Send Message</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
